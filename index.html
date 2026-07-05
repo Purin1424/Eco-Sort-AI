@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Sort AI: Zero-Waste Classroom</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+</head>
+<body class="bg-gray-100 font-sans min-h-screen flex flex-col items-center p-4">
+    <header class="w-full max-w-md bg-green-600 text-white p-4 rounded-t-xl shadow-md text-center">
+        <h1 class="text-xl font-bold">♻️ Eco-Sort AI</h1>
+        <p class="text-xs opacity-90">Smartphone Platform for Zero-Waste Classrooms</p>
+    </header>
+    <main class="w-full max-w-md bg-white p-4 rounded-b-xl shadow-md flex flex-col items-center gap-4">
+        <div class="relative w-full aspect-square bg-black rounded-lg overflow-hidden shadow-inner">
+            <video id="webcam" autoplay playsinline muted class="w-full h-full object-cover"></video>
+            <div id="loading-status" class="absolute inset-0 flex items-center justify-center bg-gray-900/80 text-white text-sm">
+                กำลังโหลดโมเดล AI...
+            </div>
+        </div>
+        <div class="w-full bg-gray-50 p-3 rounded-lg border border-gray-200">
+            <h3 class="text-sm font-semibold text-gray-500 mb-1">ผลการวิเคราะห์ขยะ:</h3>
+            <div id="prediction-result" class="text-2xl font-bold text-green-700">-</div>
+            <div id="prediction-confidence" class="text-xs text-gray-400 mt-0.5">ความแม่นยำ: 0%</div>
+        </div>
+        <div id="sorting-guide" class="w-full p-3 rounded-lg text-sm hidden"></div>
+        <button id="btn-submit" disabled class="w-full py-3 bg-gray-400 text-white font-bold rounded-lg shadow cursor-not-allowed">
+            ยืนยันการทิ้งขยะ & บันทึกสถิติ
+        </button>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
