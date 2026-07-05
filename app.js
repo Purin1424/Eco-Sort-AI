@@ -1,5 +1,5 @@
 const MODEL_URL = "./model/"; 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwOrO6Rie3MDstS9qow6D_bXfAHuoEM7AnvfP_nDED39WMsOrhWPneSbkD_RieTrOEmqw/exec"; 
+const GOOGLE_SCRIPT_URL = "วาง_URL_ยาวๆ_ที่ก๊อปปี้มาจากขั้นแรกตรงนี้"; 
 
 const EMISSION_DATABASE = {
     "Class 0": { name: "ขวดพลาสติก PET", weight: 0.020, ef_landfill: 2.91, ef_recycle: 1.20, bin: "ถังสีน้ำเงิน (ขยะรีไซเคิล)", color: "bg-blue-100 text-blue-800 border-blue-300" },
